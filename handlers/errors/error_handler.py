@@ -3,6 +3,7 @@ from aiogram.utils.exceptions import (TelegramAPIError,
                                       MessageNotModified,
                                       CantParseEntities)
 
+from data import config
 from utils import botlogging
 from loader import dp
 
@@ -23,9 +24,6 @@ async def errors_handler(update, exception):
     logger.error(exception)
 
 """
-=======
-
->>>>>>> f15fcd1... 'm'
     if isinstance(exception, MessageNotModified):
         logging.exception('Message is not modified')
         # do something here?
@@ -43,5 +41,4 @@ async def errors_handler(update, exception):
     
     # At least you have tried.
     logging.exception(f'Update: {update} \n{exception}')
-<<<<<<< HEAD
     """

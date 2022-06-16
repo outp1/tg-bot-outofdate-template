@@ -5,11 +5,9 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ADMINS	data/config.py	/^ADMINS = env.list("ADMINS")  # Тут у нас будет список из админов$/;"	v
-BOTNICK	data/config.py	/^BOTNICK = env.str("BOTNICK")$/;"	v
 BOT_NAME	data/config.py	/^BOT_NAME = env.str("BOT_NAME")$/;"	v
 BOT_TOKEN	data/config.py	/^BOT_TOKEN = env.str("BOT_TOKEN")  # Забираем значение типа str$/;"	v
 BotLogging	utils/botlogging/botlogging.py	/^class BotLogging:$/;"	c
-LOGS_BOT_TOKEN	data/config.py	/^LOGS_BOT_TOKEN = env.str("LOGS_BOT_TOKEN")$/;"	v
 LOGS_BOT_TOKEN	data/config.py	/^LOGS_BOT_TOKEN = env.str("LOGS_TOKEN")$/;"	v
 LOGS_DIR	data/config.py	/^LOGS_DIR = env.str("FOLDER_LOGS")$/;"	v
 POSTGRES_AUTH	data/config.py	/^POSTGRES_AUTH = {$/;"	v
