@@ -5,11 +5,11 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ADMINS	data/config.py	/^ADMINS = env.list("ADMINS")  # Тут у нас будет список из админов$/;"	v
+BOTNICK	data/config.py	/^BOTNICK = env.str("BOTNICK")$/;"	v
 BOT_NAME	data/config.py	/^BOT_NAME = env.str("BOT_NAME")$/;"	v
 BOT_TOKEN	data/config.py	/^BOT_TOKEN = env.str("BOT_TOKEN")  # Забираем значение типа str$/;"	v
 BotLogging	utils/botlogging/botlogging.py	/^class BotLogging:$/;"	c
-BotLogging	utils/botlogging/logging.py	/^class BotLogging:$/;"	c
-BotLogging	utils/logging/logging.py	/^class BotLogging:$/;"	c
+LOGS_BOT_TOKEN	data/config.py	/^LOGS_BOT_TOKEN = env.str("LOGS_BOT_TOKEN")$/;"	v
 LOGS_BOT_TOKEN	data/config.py	/^LOGS_BOT_TOKEN = env.str("LOGS_TOKEN")$/;"	v
 LOGS_DIR	data/config.py	/^LOGS_DIR = env.str("FOLDER_LOGS")$/;"	v
 POSTGRES_AUTH	data/config.py	/^POSTGRES_AUTH = {$/;"	v
@@ -21,10 +21,8 @@ __enter__	utils/db_api/sqlighter.py	/^    def __enter__(self):$/;"	m	class:Sqlig
 __exit__	utils/db_api/sqlighter.py	/^    def __exit__(self, exc_type, exc_val, exc_tb):$/;"	m	class:Sqlighter	file:
 __init__	middlewares/throttling.py	/^    def __init__(self, limit=DEFAULT_RATE_LIMIT, key_prefix='antiflood_'):$/;"	m	class:ThrottlingMiddleware
 __init__	utils/botlogging/botlogging.py	/^    def __init__(self, logger_name: str, logs_dir: str, bot_token: str, admin, $/;"	m	class:BotLogging
-__init__	utils/botlogging/logging.py	/^    def __init__(self, logger_name: str, logs_dir: str, bot_token: str, admin: str, $/;"	m	class:BotLogging
 __init__	utils/botlogging/telegram_errors_handler.py	/^    def __init__(self, bot_token: str, admin_id: str, bot_name: str):$/;"	m	class:TelegramHandler
 __init__	utils/db_api/sqlighter.py	/^    def __init__(self, db_name):$/;"	m	class:Sqlighter
-__init__	utils/logging/logging.py	/^    def __init__(self, logger_name: str, logs_dir: str, bot_token: str, admin: str, $/;"	m	class:BotLogging
 __init__	utils/telegram_errors_handler.py	/^    def __init__(self, bot_token: str, admin_id: str, bot_name: str):$/;"	m	class:TelegramHandler
 bot	loader.py	/^bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)$/;"	v
 bot_echo	handlers/users/echo.py	/^async def bot_echo(message: types.Message):$/;"	f
@@ -32,8 +30,6 @@ bot_echo_all	handlers/users/echo.py	/^async def bot_echo_all(message: types.Mess
 bot_help	handlers/users/help.py	/^async def bot_help(message: types.Message):$/;"	f
 bot_start	handlers/users/start.py	/^async def bot_start(message: types.Message):$/;"	f
 create_logs_folder	utils/botlogging/botlogging.py	/^    def create_logs_folder(self, logs_dir: str):$/;"	m	class:BotLogging
-create_logs_folder	utils/botlogging/logging.py	/^    def create_logs_folder(self, logs_dir: str):$/;"	m	class:BotLogging
-create_logs_folder	utils/logging/logging.py	/^    def create_logs_folder(self, logs_dir: str):$/;"	m	class:BotLogging
 create_logs_folder	utils/misc/logging.py	/^def create_logs_folder(folder=config.FOLDER_LOGS):$/;"	f
 decorator	utils/misc/throttling.py	/^    def decorator(func):$/;"	f	function:rate_limit
 dir_path	utils/botlogging/botlogging.py	/^    dir_path = os.path.dirname(os.path.realpath(__file__))$/;"	v	class:BotLogging
@@ -43,16 +39,10 @@ emit	utils/telegram_errors_handler.py	/^    def emit(self, record: logging.LogRe
 env	data/config.py	/^env = Env()$/;"	v
 errors_handler	handlers/errors/error_handler.py	/^async def errors_handler(update, exception):$/;"	f
 get_bot_logger	utils/botlogging/botlogging.py	/^    def get_bot_logger(self):$/;"	m	class:BotLogging
-get_bot_logger	utils/botlogging/logging.py	/^    def get_bot_logger(self, logger_name, bot_nickname):$/;"	m	class:BotLogging
-get_bot_logger	utils/logging/logging.py	/^    def get_bot_logger(self, logger_name, bot_nickname):$/;"	m	class:BotLogging
 get_default_logger	utils/botlogging/botlogging.py	/^    def get_default_logger(self):$/;"	m	class:BotLogging
-get_default_logger	utils/botlogging/logging.py	/^    def get_default_logger(self):$/;"	m	class:BotLogging
-get_default_logger	utils/logging/logging.py	/^    def get_default_logger(self):$/;"	m	class:BotLogging
 get_default_logger	utils/misc/logging.py	/^def get_default_logger():$/;"	f
 get_handler_dir	utils/botlogging/botlogging.py	/^    def get_handler_dir(self, handler_dir: str): $/;"	m	class:BotLogging
 get_logger	utils/botlogging/botlogging.py	/^    def get_logger(self):$/;"	m	class:BotLogging
-get_logger	utils/botlogging/logging.py	/^    def get_logger(self):$/;"	m	class:BotLogging
-get_logger	utils/logging/logging.py	/^    def get_logger(self):$/;"	m	class:BotLogging
 get_logger	utils/misc/logging.py	/^def get_logger(name, template='default'):$/;"	f
 log	utils/misc/logging.py	/^log = get_logger('M')$/;"	v
 logger	handlers/errors/error_handler.py	/^logger = botlogging.BotLogging(logger_name='Main', logs_dir=config.LOGS_DIR, bot_token=config.LOGS_BOT_TOKEN, $/;"	v

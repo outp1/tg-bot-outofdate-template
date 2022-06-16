@@ -1,9 +1,4 @@
 aiogram<3.0
-<<<<<<< HEAD
 requests
 environs~=8.0.0
 psycopg2-binary==2.9.1
-
-=======
-environs~=8.0.0
->>>>>>> f15fcd1... 'm'

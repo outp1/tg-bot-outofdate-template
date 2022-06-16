@@ -3,18 +3,12 @@ from aiogram.utils.exceptions import (TelegramAPIError,
                                       MessageNotModified,
                                       CantParseEntities)
 
-<<<<<<< HEAD
 from utils import botlogging
 from loader import dp
 
 logger = botlogging.BotLogging(logger_name='Main', logs_dir=config.LOGS_DIR, bot_token=config.LOGS_BOT_TOKEN, 
             bot_nickname=config.BOT_NAME, admin=config.ADMINS)
 logger = logger.get_logger()
-=======
-
-from loader import dp
->>>>>>> f15fcd1... 'm'
-
 
 @dp.errors_handler()
 async def errors_handler(update, exception):
@@ -26,7 +20,6 @@ async def errors_handler(update, exception):
     :return: stdout logging
     """
 
-<<<<<<< HEAD
     logger.error(exception)
 
 """
@@ -52,5 +45,3 @@ async def errors_handler(update, exception):
     logging.exception(f'Update: {update} \n{exception}')
 <<<<<<< HEAD
     """
-=======
->>>>>>> f15fcd1... 'm'
