@@ -4,6 +4,7 @@ import logging
 
 from data import config
 from loader import dp
+from keyboards import inline
 
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
