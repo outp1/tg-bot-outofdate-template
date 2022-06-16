@@ -17,3 +17,6 @@ POSTGRES_AUTH = {
     'port': env.str("POSTGRES_PORT"),
     'database': env.str("POSTGRES_DB")
     }
+
+# Other constants
+IN_CLOSE_TEXT = 'Закрыть'
