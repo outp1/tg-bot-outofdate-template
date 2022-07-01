@@ -1,7 +1,7 @@
 import psycopg2
 from data.config import POSTGRES_AUTH
 
-
+# TODO: самодостаточный модуль, без глобалоk
 class Sqlighter:
 
     def __init__(self, db_name):

@@ -8,6 +8,7 @@ ADMINS	data/config.py	/^ADMINS = env.list("ADMINS")  # Тут у нас буде
 BOT_NAME	data/config.py	/^BOT_NAME = env.str("BOT_NAME")$/;"	v
 BOT_TOKEN	data/config.py	/^BOT_TOKEN = env.str("BOT_TOKEN")  # Забираем значение типа str$/;"	v
 BotLogging	utils/botlogging/botlogging.py	/^class BotLogging:$/;"	c
+DatabaseConnection	utils/db_api/sqlighter.py	/^class DatabaseConnection(Sqlighter): $/;"	c
 IN_CLOSE_TEXT	data/config.py	/^IN_CLOSE_TEXT = 'Закрыть'$/;"	v
 LOGS_BOT_TOKEN	data/config.py	/^LOGS_BOT_TOKEN = env.str("LOGS_TOKEN")$/;"	v
 LOGS_DIR	data/config.py	/^LOGS_DIR = env.str("FOLDER_LOGS")$/;"	v
@@ -21,12 +22,14 @@ __init__	middlewares/throttling.py	/^    def __init__(self, limit=DEFAULT_RATE_L
 __init__	utils/botlogging/botlogging.py	/^    def __init__(self, logger_name: str, logs_dir: str, bot_token: str, admin, $/;"	m	class:BotLogging
 __init__	utils/botlogging/telegram_errors_handler.py	/^    def __init__(self, bot_token: str, admin_id: str, bot_name: str):$/;"	m	class:TelegramHandler
 __init__	utils/db_api/sqlighter.py	/^    def __init__(self, db_name):$/;"	m	class:Sqlighter
+__init__	utils/db_api/sqlighter.py	/^    def __init__(self, db_name: str, tables: list):$/;"	m	class:DatabaseConnection
 bot	loader.py	/^bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)$/;"	v
 bot_echo	handlers/users/echo.py	/^async def bot_echo(message: types.Message):$/;"	f
 bot_echo_all	handlers/users/echo.py	/^async def bot_echo_all(message: types.Message, state: FSMContext):$/;"	f
 bot_help	handlers/users/help.py	/^async def bot_help(message: types.Message):$/;"	f
 bot_start	handlers/users/start.py	/^async def bot_start(message: types.Message):$/;"	f
 create_logs_folder	utils/botlogging/botlogging.py	/^    def create_logs_folder(self, logs_dir: str):$/;"	m	class:BotLogging
+create_tables	utils/db_api/sqlighter.py	/^    def create_tables(self, tables):$/;"	m	class:DatabaseConnection
 decorator	utils/misc/throttling.py	/^    def decorator(func):$/;"	f	function:rate_limit
 dir_path	utils/botlogging/botlogging.py	/^    dir_path = os.path.dirname(os.path.realpath(__file__))$/;"	v	class:BotLogging
 dp	loader.py	/^dp = Dispatcher(bot, storage=storage)$/;"	v
